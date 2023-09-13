@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
                 Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
                 Log.d("onResponse", response.toString());
-//                Connect to dashboard
+//------------------ Connect to dashboard --------------------------------------------------
                 Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
