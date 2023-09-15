@@ -58,7 +58,7 @@ public class SignupActivity extends AppCompatActivity {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                Toast.makeText(SignupActivity.this, "Data added to API", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignupActivity.this, "Signed Succesfully", Toast.LENGTH_SHORT).show();
 //                User responseFromAPI = response.body();
             }
 
