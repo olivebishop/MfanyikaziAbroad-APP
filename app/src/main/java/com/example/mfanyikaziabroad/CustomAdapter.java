@@ -1,9 +1,13 @@
 package com.example.mfanyikaziabroad;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
@@ -46,6 +50,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         viewHolder.description.setText(filteredJobList.get(position).getDescription());
         viewHolder.type.setText(filteredJobList.get(position).getType());
         viewHolder.salary_range.setText(filteredJobList.get(position).getSalary_range());
+        viewHolder.applyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), ApplyActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -98,12 +109,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         private TextView description;
         private TextView type;
         private TextView salary_range;
+        private Button applyBtn;
         public MyViewHolder(@NonNull View view) {
             super(view);
             title = view.findViewById(R.id.job_title);
             description = view.findViewById(R.id.description);
             type = view.findViewById(R.id.type);
             salary_range = view.findViewById(R.id.salary_range);
+            applyBtn = view.findViewById(R.id.job_apply);
         }
     }
 }

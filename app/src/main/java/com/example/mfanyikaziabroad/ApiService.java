@@ -17,4 +17,8 @@ public interface ApiService {
     @GET("jobs")
     Call<List<Job>> getAllJobs();
 
+    //    Apply all jobs
+    @POST("applications")
+    Call<Application> submitApplication(@Body Application application);
+
 }

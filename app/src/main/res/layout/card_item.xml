@@ -49,11 +49,11 @@
             android:textSize="14sp"
             tools:text="Salary Range" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="82dp"
+        <Button
+            android:id="@+id/job_apply"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/sym_action_call"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:text="Apply" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
